@@ -25,8 +25,12 @@ public class SubscriptionController {
     }
 
     @PostMapping
-    public ResponseEntity<Subscription> createSubscription(@RequestBody Subscription subscription) {
-        Subscription createdSubscription = subscriptionService.createSubscription(subscription);
+    public ResponseEntity<Subscription> createSubscription(
+            @RequestParam Long userId,
+            @RequestParam String tier,
+            @RequestParam Double price) {
+        System.out.println("userId: " + userId + ", tier: " + tier + ", price: " + price);
+        Subscription createdSubscription = subscriptionService.createSubscription(userId, tier, price);
         return ResponseEntity.ok(createdSubscription);
     }
 
@@ -42,4 +46,5 @@ public class SubscriptionController {
         subscriptionService.deleteSubscription(id);
         return ResponseEntity.noContent().build();
     }
+
 }

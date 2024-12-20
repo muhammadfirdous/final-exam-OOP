@@ -1,0 +1,23 @@
+{
+  "name": "subscription-management",
+  "version": "1.0.0",
+  "description": "Subscription Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "react-scripts build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "author": "Muhammad Firdous",
+  "license": "ISC"
+}

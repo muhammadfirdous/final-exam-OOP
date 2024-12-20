@@ -38,4 +38,12 @@ public class SubscriptionService {
     public void deleteSubscription(Long id) {
         subscriptionRepository.deleteById(id);
     }
+
+    public Subscription updateSubscription(Long id, String tier, Double price) {
+        return null;
+    }
+
+    public Subscription createSubscription(Long userId, String tier, Double price) {
+        return null;
+    }
 }
